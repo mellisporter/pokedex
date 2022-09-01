@@ -7,6 +7,7 @@
     <title>Pokedex</title>
 </head>
 <body>
+    <a href="/pokemon/new">Add New Pokemon</a>
     <% for (let i=0; i < allPokemon.length; i++) { %>  
         <!-- for loop helps up load data for each pokemon -->
     <form>
@@ -14,7 +15,6 @@
         <!-- adds name based on array  -->
         <img src="<%=allPokemon[i].img%>" class="thumb"> <br>
         <!-- adds pokemon img -->
-        <!-- Stats <%= allPokemon[i].stats.hp %> -->
         <a href="pokemon/<%=i%>">Learn More</a> <br>
         <% } %>
        

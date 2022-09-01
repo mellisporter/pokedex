@@ -8,6 +8,7 @@ const port= 3000;
 
 const pokedex = require("./models/pokemon");
 
+app.use(express.urlencoded({ extended: false }))
 
 // splash page -- saw this on the gitpub example we looked at on thursday morning
 
@@ -26,7 +27,7 @@ app.get("/pokemon", function(req, res){
 // New
 
 app.get("/pokemon/new", function(req, res){
-    res.send("Add New Pokemon")
+res.render("new.ejs")
 })
 
 // Delete
@@ -34,6 +35,11 @@ app.get("/pokemon/new", function(req, res){
 // Update
 
 // Create
+
+app.post("/pokemon" , function (req, res){
+    pokedex.push(req.body)
+    res.redirect("/pokemon")
+})
 
 // Edit
 
