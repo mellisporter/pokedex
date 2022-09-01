@@ -44,7 +44,9 @@ app.get("/pokemon/:id/edit", function(req, res){
 // Show
 
 app.get("/pokemon/:id", function(req, res){
-    res.send("Pokemon Show Page");
+    res.render("show.ejs" , {
+        pokeInfo: pokedex[req.params.id],
+    })
 })
 
 

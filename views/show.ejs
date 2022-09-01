@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+        <!-- for loop helps up load data for each pokemon -->
+    <form>
+        Name: <%= pokeInfo.name %> <br>
+        <img src="<%=pokeInfo.img%>" alt="<%= pokeInfo.name %>" class="src"> <br>
+        <ul>
+           <%= pokeInfo.type %> <br>
+        </ul>
+        HP: <%= pokeInfo.stats.hp %> <br>
+        Attack: <%= pokeInfo.stats.attack %> <br>
+        Defense: <%= pokeInfo.stats.defense %> <br>
+        <a href="/pokemon">Return to PokeDex</a> <br>
+    </form>
+</body>
+</html>
