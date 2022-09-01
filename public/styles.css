@@ -1,3 +1,14 @@
 body {
-    background-color: red;;
+    background-image: url("https://images5.alphacoders.com/566/566522.jpg")
 }
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+/* thumbnail class given limits on size so page isn't super big */
+        .thumb {
+            max-width: 200px;
+            max-height: 200px;
+        }

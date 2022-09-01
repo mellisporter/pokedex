@@ -7,28 +7,25 @@
     <title>Pokedex</title>
     <link rel="stylesheet" href="styles.css" class="style">
 </head>
+<nav>
+<div class="nav">Pokedex</div>
+<div class="nav"> <a href="/pokemon/new" class="nav">Add New Pokemon</a> <br></div>
+</nav>
 <body>
-    <a href="/pokemon/new">Add New Pokemon</a> <br>
     <% for (let i=0; i < allPokemon.length; i++) { %>  
         <!-- for loop helps up load data for each pokemon -->
-    
+    <div>
         Name: <%= allPokemon[i].name %> <br>
         <!-- adds name based on array  -->
         <img src="<%=allPokemon[i].img%>" class="thumb"> <br>
         <!-- adds pokemon img -->
-        <a href="pokemon/<%=i%>">Learn More</a> <br>
+       <button><a href="pokemon/<%=i%>">Learn More</a> <br></button>
         <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE">
             </form>
-            <a href="/pokemon/<%=i%>/edit">Edit</a>
+            <button><a href="/pokemon/<%=i%>/edit">Edit</a></button>
         <% } %>
-    <style>
-/* thumbnail class given limits on size so page isn't super big */
-        .thumb {
-            max-width: 100px;
-            max-height: 100px;
-        }
+        </div>
 
-    </style>
 </body>
 </html>
