@@ -47,6 +47,11 @@ app.delete("/pokemon/:id", (req, res) => {
 
 // Update
 
+app.put("/pokemon/:id", function(req, res){
+    pokedex[req.params.id] = req.body
+    res.redirect("/pokemon")
+})
+
 // Create
 
 app.post("/pokemon" , function (req, res){
