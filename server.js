@@ -10,6 +10,11 @@ const pokedex = require("./models/pokemon");
 
 app.use(express.urlencoded({ extended: false }))
 
+/// static 
+
+app.use(express.static('public'))
+
+
 // Delete Method
 
 const methodOverride = require("method-override")
