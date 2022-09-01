@@ -9,19 +9,41 @@ const port= 3000;
 const pokedex = require("./models/pokemon");
 
 
-// I
+// splash page -- saw this on the gitpub example we looked at on thursday morning
 
-// N
+app.get("/" , function (req, res){
+    res.send(`Welcome to the Pokedex Project! To get started, visit <a href="/pokemon"> /pokemon. </a>`)
+})
 
-// D
+// Index
 
-// U
+app.get("/pokemon", function(req, res){
+    res.send("Pokemon Index")
+})
 
-// C
+// New
 
-// E
+app.get("/pokemon/new", function(req, res){
+    res.send("Add New Pokemon")
+})
 
-// S
+// Delete
+
+// Update
+
+// Create
+
+// Edit
+
+app.get("/pokemon/:id/edit", function(req, res){
+    res.send("Add New Pokemon")
+})
+
+// Show
+
+app.get("/pokemon/:id", function(req, res){
+    res.send("Pokemon Show Page");
+})
 
 
 /// app listener
