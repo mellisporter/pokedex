@@ -10,6 +10,14 @@ const pokedex = require("./models/pokemon");
 
 app.use(express.urlencoded({ extended: false }))
 
+// Delete Method
+
+const methodOverride = require("method-override")
+//...
+//after app has been defined
+//use methodOverride.  We'll be adding a query parameter to our delete form named _method
+app.use(methodOverride("_method"))
+
 // splash page -- saw this on the gitpub example we looked at on thursday morning
 
 app.get("/" , function (req, res){
@@ -31,6 +39,11 @@ res.render("new.ejs")
 })
 
 // Delete
+
+app.delete("/pokemon/:id", (req, res) => {
+    pokedex.splice(req.params.id, 1) //remove the item from the array
+    res.redirect("/pokemon") //redirect back to index route
+  })
 
 // Update
 
