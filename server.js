@@ -57,7 +57,10 @@ app.post("/pokemon" , function (req, res){
 // Edit
 
 app.get("/pokemon/:id/edit", function(req, res){
-    res.send("Add New Pokemon")
+    res.render("edit.ejs" , {
+        poke: pokedex[req.params.id],
+        id: req.params.id,
+    })
 })
 
 // Show
