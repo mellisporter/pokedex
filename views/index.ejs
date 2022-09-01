@@ -7,10 +7,10 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <a href="/pokemon/new">Add New Pokemon</a>
+    <a href="/pokemon/new">Add New Pokemon</a> <br>
     <% for (let i=0; i < allPokemon.length; i++) { %>  
         <!-- for loop helps up load data for each pokemon -->
-    <form>
+    
         Name: <%= allPokemon[i].name %> <br>
         <!-- adds name based on array  -->
         <img src="<%=allPokemon[i].img%>" class="thumb"> <br>
@@ -20,8 +20,6 @@
             <input type="submit" value="DELETE">
             </form>
         <% } %>
-       
-    </form>
     <style>
 /* thumbnail class given limits on size so page isn't super big */
         .thumb {
