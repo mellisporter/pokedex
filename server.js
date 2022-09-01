@@ -18,7 +18,9 @@ app.get("/" , function (req, res){
 // Index
 
 app.get("/pokemon", function(req, res){
-    res.send("Pokemon Index")
+    res.render("index.ejs" , {
+        allPokemon: pokedex
+    })
 })
 
 // New
