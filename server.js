@@ -60,6 +60,34 @@ app.put("/pokemon/:id", function(req, res){
 // Create
 
 app.post("/pokemon" , function (req, res){
+    // had trouble getting the stats to load for created pokemon so went through this with sarah
+    // let pokeBody = req.body;
+    // let newPoke = {};
+    // let stats = {};
+    // stats.hp = pokeBody.hp;
+    // stats.attack = pokeBody.attack;
+    // stats.defense = pokeBody.defense;
+    // newPoke.name = pokeBody.name;
+    // newPoke.type = pokeBody.type;
+    // newPoke.img = pokeBody.img;
+    // newPoke.stats = stats;
+    // pokedex.push(newPoke);
+    // let statsObject = {
+    //     hp: req.body.hp,
+    //     attackL
+    // }
+    // let type = req.body.type;
+
+    // we went through all this together in office hours, but my code was still breaking
+
+    // let typeArr = type.split(', ')
+    // let newPokemon = {
+    //     id: req.body.id,
+    //     name: req.body.name,
+    //     img: req.body.img,
+    //     type: typeArr,
+    //     stats: statsObject,
+    // }
     pokedex.push(req.body)
     res.redirect("/pokemon")
 })

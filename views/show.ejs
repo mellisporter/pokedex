@@ -9,12 +9,25 @@
 <body>
         <!-- for loop helps up load data for each pokemon -->
     <form>
-        Name: <%= pokeInfo.name %> <br>
+        <h1>Name: <%= pokeInfo.name %> </h1><br>
         <img src="<%=pokeInfo.img%>" alt="<%= pokeInfo.name %>" class="src"> <br>
-        <ul>
-           <%= pokeInfo.type %> <br>
-        </ul>
-        <%= pokeInfo.stats %>
+        
+        <h3>Type:</h3>
+                <ul>
+                    <% for (let i=0; i < pokeInfo.type.length; i++) { %>
+                        <li> <%= pokeInfo.type[i] %> </li>
+                    <% } %>
+                </ul>  
+            <h3>Stats:</h3>
+            <ul>
+                <p>HP: <%= pokeInfo.stats.hp %></p>
+                <p>Attack: <%=pokeInfo.stats.attack %> </p>
+                <p>Defense: <%=pokeInfo.stats.defense %></p>
+            </ul>
+          
+           
+
+    
         <a href="/pokemon">Return to PokeDex</a> <br>
     </form>
 </body>

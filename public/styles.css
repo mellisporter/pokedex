@@ -1,10 +1,23 @@
 body {
-    background-image: url("https://images5.alphacoders.com/566/566522.jpg")
+    background-image: url("https://images5.alphacoders.com/566/566522.jpg");
+    max-width: 1000px;
+    max-height: 100px;
+    color: white;
+}
+
+nav {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
 }
 
 .nav {
-    background-color: black;
-    color: white;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 /* thumbnail class given limits on size so page isn't super big */
@@ -12,3 +25,13 @@ body {
             max-width: 200px;
             max-height: 200px;
         }
+
+.pokemon {
+    background-color: black;
+    grid-row: span;
+    border: 20px;
+}
+
+
+
+
